@@ -10,20 +10,27 @@ export const DropdownComponent = ({
   firstOption,
   list
 }) => {
-  const options = list.map((option) => <option key={option}>{option}</option>)
+  const options = list.map((option) => (
+    <option key={option} className='item'>
+      {option}
+    </option>
+  ))
 
   return (
-    <select
-      name={name}
-      className={`select ${className}`}
-      id={id}
-      onChange={onChange}
-      value={value}
-    >
-      <option value='' selected disabled hidden>
-        {firstOption}
-      </option>
-      {options}
-    </select>
+    <div className='select-box'>
+      <select
+        name={name}
+        className={`select ${className}`}
+        id={id}
+        onChange={onChange}
+        value={value}
+        defaultValue={firstOption}
+      >
+        <option className='item' disabled hidden>
+          {firstOption}
+        </option>
+        {options}
+      </select>
+    </div>
   )
 }
