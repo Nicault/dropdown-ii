@@ -17,20 +17,18 @@ export const DropdownComponent = ({
   ))
 
   return (
-    <div className='select-box'>
-      <select
-        name={name}
-        className={`select ${className}`}
-        id={id}
-        onChange={onChange}
-        value={value}
-        defaultValue={firstOption}
-      >
-        <option className='item' disabled hidden>
-          {firstOption}
-        </option>
-        {options}
-      </select>
-    </div>
+    <select
+      name={name}
+      className={`select ${className}`}
+      id={id}
+      onChange={onChange}
+      value={value}
+      defaultValue={firstOption}
+    >
+      <option className='item' disabled hidden>
+        {firstOption}
+      </option>
+      {options}
+    </select>
   )
 }

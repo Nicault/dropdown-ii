@@ -8,6 +8,7 @@
 
 ```bash
 npm install --save dropdown-ii
+yarn add dropdown-ii
 ```
 
 ## Usage
@@ -15,12 +16,22 @@ npm install --save dropdown-ii
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'dropdown-ii'
+import { DropdownComponent } from 'dropdown-ii'
 import 'dropdown-ii/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return (
+      <DropdownComponent
+        name='name'
+        className='className'
+        id='id'
+        onChange='onChange'
+        value='value'
+        firstOption='firstOption'
+        list='list'
+      />
+    )
   }
 }
 ```
